@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen overflow-hidden bg-hero px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-36 lg:pb-28 flex items-center"
+      className="relative min-h-screen overflow-hidden bg-hero px-4 pt-24 pb-16 sm:px-6 sm:pt-32 sm:pb-20 lg:px-8 lg:pt-36 lg:pb-28 flex items-center"
     >
       {/* Background ambient glowing orbs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-grid-pattern opacity-40" />
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16 w-full">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16 w-full">
         {/* Left Column — Text & CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
 
           {/* Main Title */}
-          <h1 className="mt-6 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08]">
+          <h1 className="mt-5 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08]">
             Hello, I'm{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">
               {profile.name}
@@ -46,7 +46,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-4 font-heading text-xl font-medium text-slate-200 sm:text-2xl">
+          <p className="mt-3.5 font-heading text-lg font-medium text-slate-200 sm:text-2xl">
             Computer Science and Engineering student at{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-300 font-semibold">
               MITM
@@ -54,16 +54,16 @@ export default function Hero() {
           </p>
 
           {/* Description */}
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300/90 sm:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-300/90 sm:text-lg">
             {profile.intro} Passionate about problem-solving, building useful applications, and
             continuously learning new technologies to engineer scalable, real-world software.
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded-full bg-indigo-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-600/30 transition-all duration-200 hover:scale-105 hover:bg-indigo-500 hover:shadow-indigo-600/50"
+              className="group inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 sm:px-7 sm:py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-600/30 transition-all duration-200 hover:scale-105 hover:bg-indigo-500 hover:shadow-indigo-600/50"
             >
               <span>View Projects</span>
               <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
@@ -71,7 +71,7 @@ export default function Hero() {
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/10 hover:border-white/25"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 sm:px-7 sm:py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/10 hover:border-white/25"
             >
               <Mail className="h-4 w-4 text-indigo-400" />
               <span>Get in touch</span>
@@ -81,7 +81,7 @@ export default function Hero() {
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/10 hover:border-white/25"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 sm:px-6 sm:py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/10 hover:border-white/25"
               aria-label="LinkedIn Profile"
             >
               <LinkedInIcon className="h-4 w-4 text-indigo-400" />
@@ -125,7 +125,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="relative order-1 flex justify-center px-4 lg:order-2 lg:justify-end"
         >
-          <div className="relative w-[290px] sm:w-[350px] lg:w-[410px]">
+          <div className="relative w-[230px] sm:w-[330px] lg:w-[410px]">
             {/* Ambient Backlight Glow */}
             <div className="absolute -inset-4 aspect-square rounded-full bg-gradient-to-tr from-indigo-500/35 via-violet-500/30 to-pink-500/20 blur-3xl" />
 
@@ -141,8 +141,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating Glass Badge 1: College & Degree */}
-            <div className="animate-float absolute -left-3 bottom-14 sm:bottom-16 sm:-left-6 z-20 rounded-2xl border border-white/15 bg-slate-900/85 p-3.5 shadow-xl backdrop-blur-xl flex items-center gap-3">
+            {/* Floating Glass Badge 1: College & Degree (Tablet & Desktop only) */}
+            <div className="hidden sm:flex animate-float absolute sm:-left-6 lg:-left-8 bottom-6 lg:bottom-12 z-20 rounded-2xl border border-white/15 bg-slate-900/85 p-3.5 shadow-xl backdrop-blur-xl items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/20 text-indigo-400">
                 <GraduationCap className="h-5 w-5" />
               </div>
@@ -152,8 +152,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating Glass Badge 2: Open Status */}
-            <div className="animate-float-delayed absolute -right-3 top-12 sm:top-14 sm:-right-6 z-20 rounded-2xl border border-white/20 bg-indigo-600/90 p-3.5 shadow-xl backdrop-blur-xl text-white flex items-center gap-3">
+            {/* Floating Glass Badge 2: Open Status (Tablet & Desktop only) */}
+            <div className="hidden sm:flex animate-float-delayed absolute sm:-right-6 lg:-right-8 top-8 lg:top-12 z-20 rounded-2xl border border-white/20 bg-indigo-600/90 p-3.5 shadow-xl backdrop-blur-xl text-white items-center gap-3">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/20 text-white">
                 <Sparkles className="h-5 w-5" />
               </div>
